@@ -82,17 +82,24 @@ h3,
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: .05em;
+  font-size: 36px;
   text-decoration: none;
+}
+
+.brand span {
+  position: relative;
+  top: .075em;
+}
+
+.brand,
+.brand:hover {
+  color: #fff;
 }
 
 .brand img {
   width: auto;
-  height: 32px;
-}
-
-.brand span {
-  font-size: 28px;
+  height: 1em;
 }
 
 nav {
@@ -615,16 +622,8 @@ footer p {
   }
 
   .brand {
-    gap: 8px;
+    font-size: 26px;
     white-space: nowrap;
-  }
-
-  .brand img {
-    height: 24px;
-  }
-
-  .brand span {
-    font-size: 20px;
   }
 
   nav {
