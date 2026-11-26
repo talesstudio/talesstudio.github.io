@@ -123,6 +123,10 @@ nav a {
   font-size: clamp(44px, 9vw, 96px);
 }
 
+.intro h1 span {
+  color: var(--sun);
+}
+
 .intro p {
   max-width: 34em;
   margin: 0 auto;
@@ -473,6 +477,7 @@ html:has(.viewer[open]) {
 .block h2 {
   margin: 0 0 28px;
   font-size: clamp(40px, 6vw, 60px);
+  color: var(--sun);
 }
 
 .news {
@@ -510,7 +515,6 @@ html:has(.viewer[open]) {
 .news h3 {
   margin: 0 0 6px;
   font-size: 28px;
-  color: var(--sun);
 }
 
 .news p {
