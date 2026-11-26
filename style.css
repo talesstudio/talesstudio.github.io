@@ -476,9 +476,21 @@ html:has(.viewer[open]) {
 }
 
 .news {
-  margin: 0;
-  padding: 0;
+  --shift: min(32px, calc(var(--edge) - 6px));
+  max-height: min(490px, 70vh);
+  margin: 0 calc(-1 * var(--shift)) 0 0;
+  padding: 0 var(--shift) 0 0;
+  overflow-y: auto;
+  border-bottom: 1px solid transparent;
+  background: linear-gradient(var(--line), var(--line)) left bottom / calc(100% - var(--shift)) 1px no-repeat border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #6a5720 transparent;
   list-style: none;
+}
+
+.news:focus-visible {
+  outline: 2px solid var(--sun);
+  outline-offset: 3px;
 }
 
 .news li {
@@ -498,6 +510,7 @@ html:has(.viewer[open]) {
 .news h3 {
   margin: 0 0 6px;
   font-size: 28px;
+  color: var(--sun);
 }
 
 .news p {
@@ -601,6 +614,10 @@ footer p {
 
   .track {
     --shown: 2;
+  }
+
+  .news {
+    max-height: 70vh;
   }
 
   .news li {
