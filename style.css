@@ -26,6 +26,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 72px;
   scrollbar-gutter: stable;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
