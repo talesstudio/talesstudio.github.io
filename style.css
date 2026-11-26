@@ -461,11 +461,11 @@ html:has(.viewer[open]) {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 10px;
-  height: 10px;
-  background: var(--sun);
-  box-shadow: 0 0 0 8px var(--ink);
-  transform: translate(-50%, -50%) rotate(45deg);
+  width: 50px;
+  height: 36px;
+  background: var(--ink) url("assets/poppy.png") center / 12px 36px no-repeat;
+  image-rendering: pixelated;
+  transform: translate(-50%, -50%);
 }
 
 .block {
@@ -558,10 +558,10 @@ html:has(.viewer[open]) {
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  gap: 24px;
   margin-top: clamp(64px, 10vw, 120px);
   padding: 40px var(--edge);
   border-top: 1px solid var(--line);
@@ -577,6 +577,27 @@ footer img {
 
 footer p {
   margin: 0;
+}
+
+footer .sign {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+footer .contact {
+  justify-self: end;
+  text-align: right;
+}
+
+footer .contact a {
+  color: var(--text);
+}
+
+footer .contact a:hover {
+  color: var(--sun);
 }
 
 @media (min-width: 861px) {
@@ -632,6 +653,18 @@ footer p {
 @media (max-width: 600px) {
   .track {
     --shown: 1;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  footer .sign,
+  footer .contact {
+    grid-column: 1;
+    justify-self: center;
+    text-align: center;
   }
 }
 
